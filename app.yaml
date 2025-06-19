@@ -1,1 +1,8 @@
 runtime: python38
+service: default  # explicit service name
+instance_class: F1  # smallest instance for dev
+env_variables:
+  FLASK_ENV: production
+handlers:
+- url: /.*
+  script: auto
